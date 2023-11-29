@@ -802,6 +802,7 @@ section {
 
     .home-sci {
         width: 160px;
+        margin-bottom: -70px;
     }
 
     .home-sci a {
