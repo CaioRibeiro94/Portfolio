@@ -328,7 +328,7 @@ section {
     width: 100%;
     height: 100%;
     background:var(--third-bg-color);
-    z-index: 98;
+    z-index: -1;
 }
 #menu-icon .animate {
     animation: showRight 1s ease forwards;
@@ -789,6 +789,10 @@ section {
     .navbar.active a {
         transform: translateX(0);
         transition-delay: .25s;
+    }
+
+    .animate{
+        z-index: 98;
     }
 
     .home-imgH {
