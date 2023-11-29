@@ -1,3 +1,14 @@
+// MENU NAVBAR
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+
+
 
 // MENU ACTIVE
 let sections = document.querySelectorAll('section');
@@ -25,10 +36,13 @@ window.onscroll = () =>{
     let header = document.querySelector("header")
 
     header.classList.toggle('rolagem', window.scrollY > 100)
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+
 }
 
-
-btnMobile.addEventListener('click', toggleMenu);
-btnMobile.addEventListener('touchstart', toggleMenu);
+// btnMobile.addEventListener('click', toggleMenu);
+// btnMobile.addEventListener('touchstart', toggleMenu);
 
 /////////////

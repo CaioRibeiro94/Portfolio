@@ -18,10 +18,6 @@
     --main-color: #00abf0;
 }
 
-section{
-    padding: 10rem 9% 2rem;
-    
-}
 body{
     color: var(--text-color);
 }
@@ -87,9 +83,12 @@ body{
     transition: all .3s ease
 }
 
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem ;
+}
 
 .home{
-    height: 100vh;
     background:url(/img/home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -99,14 +98,15 @@ body{
 }
 
 .home-content{
-    max-width: 710px;
+    max-width: 60rem;
+    z-index: 99;
 }
 
 .home-content h1{
     position: relative;
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .home-content h1::before{
@@ -123,7 +123,7 @@ body{
 
 .home-content h3{
     position: relative;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700px;
     color: var(--main-color);
 }
@@ -142,8 +142,8 @@ body{
 
 .home-content p{
     position: relative;
-    font-size: 1rem;
-    margin: 20px 0 40px;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
 }
 
 
@@ -377,6 +377,7 @@ body{
     border-bottom: .2rem solid var(--second-bg-color-);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content {
@@ -690,7 +691,7 @@ body{
 
 @media (max-width: 1200px){
     html {
-        font-size: 70%;
+        font-size: 55%;
     }
 }
 
@@ -707,7 +708,158 @@ body{
         padding: 0 4%;
     }
 
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+
     .footer {
         padding: 2rem 4%;
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background:var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba( 0, 0, 0, .2);
+        transition: .25s ease;
+        transition-delay: .25s;
+        z-index: 1;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba( 0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
+    .home-imgH {
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci {
+        width: 160px;
+    }
+
+    .home-sci a {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 462px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .education {
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contatos form .input-box .input-field {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .portfolio .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+}
+
+
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
