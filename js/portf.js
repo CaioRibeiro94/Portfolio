@@ -20,10 +20,12 @@ window.onscroll = () => {
 
 //    HEADER ROLAGEM  //
 
-window.addEventListener("scroll", function(){
+window.onscroll = () =>{
+
     let header = document.querySelector("header")
-    header.classList.toggle('rolagem', window.scrollY > 0)
-})
+
+    header.classList.toggle('rolagem', window.scrollY > 100)
+}
 
 
 btnMobile.addEventListener('click', toggleMenu);

@@ -73,6 +73,13 @@ body{
     transition: all .6s ease;
 }
 
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
 .header.rolagem{
     background-color: var(--bg-color);
     padding: 20px 4%;
@@ -569,10 +576,61 @@ body{
 }
 /* Contatos */
 
-.contact{
-    width: 100wh;
-    height: 100vh;
-    background: var(--second-bg-color-);
+.contatos{
+    min-height: auto;
+    padding-bottom: 7rem;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.contatos h2{
+    font-size: 2em;
+}
+
+.contatos form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contatos form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contatos form .input-box .input-field input,
+.contatos form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: transparent;
+    border-radius:  .6rem;
+    border: .2rem solid #fff;
+    color: var(--text-color);
+}
+
+.contatos form .input-box .input-field input::placeholder,
+.contatos form .textarea-field textarea::placeholder{
+    color: var(--main-color);
+}
+
+
+.contatos form .textarea-field{
+    position: relative;
+    margin:  .8rem 0 2.7 rem;
+    display: flex;
+}
+
+.contatos form .textarea-field textarea {
+    resize: none;
+}
+
+.contatos form .btn-box.btns .btn{
+    cursor: pointer;
+    margin-top: 1rem;
 }
 /* Footer */
 
@@ -625,4 +683,31 @@ body{
 
 .footer-iconTop a:hover i{
     color: var(--main-color);
+}
+
+/* RESPONSIVO */
+
+
+@media (max-width: 1200px){
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 990px) {
+    .header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding: 0 4%;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
 }
