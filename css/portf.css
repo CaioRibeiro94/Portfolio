@@ -814,6 +814,10 @@ section {
     .home-content h1 {
         font-size: 5.2rem;
     }
+    
+    .home-content .btn-box {
+        margin-bottom: 10rem;
+    }
 
     .education {
         padding: 10rem 4% 5rem 5%;
@@ -831,9 +835,9 @@ section {
         margin-top: 2rem;
         text-align: center;
     }
-    
+
     .portfolio .portfolio-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1fr);
     }
 }
 
