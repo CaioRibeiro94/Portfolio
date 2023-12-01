@@ -10,23 +10,23 @@
     /* scroll-padding:7em; */
 }
 
-:root{
+/* :root{
     --bg-color: #000000ee;
     --second-bg-color-: #262626;
     --third-bg-color: #000000ee;
     --text-color: #ffebd2;
     --main-color: #fc7643;
-}
+} */
 
 
-/* :root {
+:root {
     --bg-color: #081b29;
     --second-bg-color-: #112e42;
     --third-bg-color: #011425;
     --text-color: #ededed;
     --main-color: #00abf0;
 }
- */
+
 
 
 body{
